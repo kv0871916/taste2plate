@@ -1,26 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tastes2plate/helpers/validators.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class LoginView extends StatefulWidget {
+class SignupView extends StatefulWidget {
   final Image mbicon;
   final Image otpicon;
-  LoginView(
+  SignupView(
     this.mbicon,
     this.otpicon,
   );
 
   @override
-  _LoginViewState createState() => _LoginViewState(
+  _SignupViewState createState() => _SignupViewState(
         this.mbicon,
         this.otpicon,
       );
 }
 
-class _LoginViewState extends State<LoginView> {
+class _SignupViewState extends State<SignupView> {
   final Image mbicon;
   final Image otpicon;
-  _LoginViewState(
+  _SignupViewState(
     this.mbicon,
     this.otpicon,
   );
@@ -40,16 +41,14 @@ class _LoginViewState extends State<LoginView> {
               borderRadius: BorderRadius.all(
                   Radius.circular(10.0)), // set rounded corner radius
             ),
-            child: Center(
-              child: CupertinoFormRow(
-                prefix: Container(
-                  width: context.safePercentWidth * 6,
-                  child: mbicon,
-                ),
-                child: CupertinoTextFormFieldRow(
-                  placeholder: 'Mobile Number',
-                  validator: (value) => validateMobile(value!),
-                ),
+            child: CupertinoFormRow(
+              prefix: Container(
+                width: context.safePercentWidth * 6,
+                child: mbicon,
+              ),
+              child: CupertinoTextFormFieldRow(
+                placeholder: 'Email',
+                validator: (value) => validateMobile(value!),
               ),
             ),
           ),
@@ -64,14 +63,16 @@ class _LoginViewState extends State<LoginView> {
               borderRadius: BorderRadius.all(
                   Radius.circular(10.0)), // set rounded corner radius
             ),
-            child: CupertinoFormRow(
-              prefix: Container(
-                width: context.safePercentWidth * 6,
-                child: otpicon,
-              ),
-              child: CupertinoTextFormFieldRow(
-                placeholder: 'OTP',
-                validator: (value) => validateMobile(value!),
+            child: Center(
+              child: CupertinoFormRow(
+                prefix: Container(
+                  width: context.safePercentWidth * 6,
+                  child: otpicon,
+                ),
+                child: CupertinoTextFormFieldRow(
+                  placeholder: 'Mobile Number',
+                  validator: (value) => validateMobile(value!),
+                ),
               ),
             ),
           ),
@@ -90,6 +91,4 @@ class _LoginViewState extends State<LoginView> {
       ),
     );
   }
-
-  validateMobile(String s) {}
 }

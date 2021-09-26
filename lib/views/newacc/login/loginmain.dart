@@ -11,6 +11,14 @@ class LoginMain extends StatefulWidget {
 class _LoginMainState extends State<LoginMain> {
   @override
   Widget build(BuildContext context) {
-    return Material(child: LoginView());
+    return Material(
+        child: LoginView(
+      Image.asset(
+        'icons/smartphone.png',
+      ),
+      Image.asset(
+        'icons/mobile-phone.png',
+      ),
+    ));
   }
 }

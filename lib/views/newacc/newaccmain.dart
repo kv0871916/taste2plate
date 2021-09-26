@@ -12,6 +12,9 @@ class NewAccMain extends StatefulWidget {
 class _NewAccMainState extends State<NewAccMain> {
   @override
   Widget build(BuildContext context) {
-    return Material(child: NewAccView());
+    return Material(
+        child: NewAccView(
+      Image.asset('bgback/logo.png'),
+    ));
   }
 }
