@@ -1,0 +1,53 @@
+name: tastes2plate
+description: A new Flutter project.
+
+publish_to: "none" #
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  velocity_x: ^3.3.0
+  vrouter: ^1.2.0+13
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - icons/
+    - bgback/
+  fonts:
+    - family: OleoScript
+      fonts:
+        - asset: fonts/Oleo_Script/OleoScript-Bold.ttf
+        - asset: fonts/Oleo_Script/OleoScript-Regular.ttf
+
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins/Poppins-Black.ttf
+        - asset: fonts/Poppins/Poppins-BlackItalic.ttf
+        - asset: fonts/Poppins/Poppins-Bold.ttf
+        - asset: fonts/Poppins/Poppins-BoldItalic.ttf
+        - asset: fonts/Poppins/Poppins-ExtraBold.ttf
+        - asset: fonts/Poppins/Poppins-ExtraLight.ttf
+        - asset: fonts/Poppins/Poppins-ExtraBoldItalic.ttf
+        - asset: fonts/Poppins/Poppins-ExtraLightItalic.ttf
+        - asset: fonts/Poppins/Poppins-Italic.ttf
+        - asset: fonts/Poppins/Poppins-Light.ttf
+        - asset: fonts/Poppins/Poppins-LightItalic.ttf
+        - asset: fonts/Poppins/Poppins-Medium.ttf
+        - asset: fonts/Poppins/Poppins-MediumItalic.ttf
+        - asset: fonts/Poppins/Poppins-Regular.ttf
+        - asset: fonts/Poppins/Poppins-SemiBold.ttf
+        - asset: fonts/Poppins/Poppins-SemiBoldItalic.ttf
+        - asset: fonts/Poppins/Poppins-Thin.ttf
+        - asset: fonts/Poppins/Poppins-ThinItalic.ttf
