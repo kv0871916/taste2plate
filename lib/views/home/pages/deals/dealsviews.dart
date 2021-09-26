@@ -60,18 +60,105 @@ class _DealsViewState extends State<DealsView> {
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Column(
               children: [
-                typefoodcat('icons/OFFERS.jpg', 'Cooked Food'),
-                typefoodcat('icons/OFFERS.jpg', 'Sweets'),
-                typefoodcat('icons/OFFERS.jpg', 'Grains'),
-                typefoodcat('icons/OFFERS.jpg', 'Spices'),
-                typefoodcat('icons/OFFERS.jpg', 'Chicken')
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    typefoodcat('icons/OFFERS.jpg', 'Cooked Food'),
+                    typefoodcat('icons/OFFERS.jpg', 'Sweets'),
+                    typefoodcat('icons/OFFERS.jpg', 'Grains'),
+                    typefoodcat('icons/OFFERS.jpg', 'Spices'),
+                    typefoodcat('icons/OFFERS.jpg', 'Chicken')
+                  ],
+                ).scrollHorizontal(),
+                VxSwiper(
+                  enlargeCenterPage: true,
+                  scrollDirection: Axis.horizontal,
+                  items: [
+                    Image.asset(
+                      'icons/1.png',
+                      width: context.screenWidth,
+                      fit: BoxFit.fitWidth,
+                    ),
+                    Image.asset(
+                      'icons/2.png',
+                      width: context.screenWidth,
+                      fit: BoxFit.fitWidth,
+                    ),
+                    Image.asset(
+                      'icons/3.png',
+                      width: context.screenWidth,
+                      fit: BoxFit.fitWidth,
+                    ),
+                    Image.asset(
+                      'icons/4.png',
+                      width: context.screenWidth,
+                      fit: BoxFit.fitWidth,
+                    )
+                  ],
+                  height: 170,
+                  viewportFraction: context.isMobile ? 0.75 : 0.4,
+                  autoPlay: true,
+                  autoPlayAnimationDuration: 1.seconds,
+                ).box.p8.makeCentered(),
+                'Deals of the Day'
+                    .text
+                    .size(10)
+                    .fontWeight(FontWeight.w400)
+                    .makeCentered()
               ],
-            ).scrollHorizontal(),
+            ).box.p8.white.outerShadowSm.makeCentered(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: context.safePercentHeight * 15,
+                width: context.safePercentWidth * 40,
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      'icons/1.png',
+                      width: context.screenWidth,
+                      fit: BoxFit.fitWidth,
+                    ),
+                    '75%\noff'
+                        .text
+                        .white
+                        .bold
+                        .scale(0.7)
+                        .make()
+                        .box
+                        .margin(EdgeInsets.all(5))
+                        .p8
+                        .color(Colors.red)
+                        .roundedFull
+                        .shadow2xl
+                        .make()
+                        .objectBottomRight()
+                  ],
+                ),
+              ),
+            ),
+            'Cooked Food'.text.semiBold.scale(0.8).makeCentered().box.make(),
+            'Mutton Galauti Kebab, Tundy Kababi and ...'
+                .text
+                .fontWeight(FontWeight.w300)
+                .scale(0.8)
+                .makeCentered()
+                .box
+                .py4
+                .make(),
+            '13 : !5 : 40 Left'
+                .text
+                .red500
+                .fontWeight(FontWeight.w300)
+                .scale(0.8)
+                .makeCentered()
+                .box
+                .py4
+                .make(),
           ],
-        ),
+        ).scrollVertical(),
       ),
     );
   }
