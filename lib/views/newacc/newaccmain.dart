@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tastes2plate/views/newacc/login/loginview.dart';
+
 import 'package:tastes2plate/views/newacc/newaccview.dart';
 
 class NewAccMain extends StatefulWidget {

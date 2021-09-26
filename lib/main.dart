@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tastes2plate/views/home/homemain.dart';
 
 import 'package:tastes2plate/views/newacc/login/loginmain.dart';
 import 'package:tastes2plate/views/newacc/newaccmain.dart';
@@ -38,6 +39,15 @@ class MyApp extends StatelessWidget {
           name: 'newacc',
           widget: Material(
             child: NewAccMain(),
+          ),
+          buildTransition: (animation1, _, child) =>
+              FadeTransition(opacity: animation1, child: child),
+        ),
+        VWidget(
+          path: '/home',
+          name: 'home',
+          widget: Material(
+            child: HomeMain(),
           ),
           buildTransition: (animation1, _, child) =>
               FadeTransition(opacity: animation1, child: child),

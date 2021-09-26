@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:vrouter/vrouter.dart';
 
 class LoginView extends StatefulWidget {
   final Image mbicon;
@@ -83,7 +86,9 @@ class _LoginViewState extends State<LoginView> {
               ),
               height: context.mq.size.height * 0.07,
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  context.vRouter.to('/home');
+                },
                 child: 'Get Otp'.text.thin.uppercase.white.bold.makeCentered(),
               ))
         ],

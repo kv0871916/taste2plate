@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tastes2plate/helpers/validators.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:vrouter/vrouter.dart';
 
 class SignupView extends StatefulWidget {
   final Image mbicon;
@@ -84,7 +85,9 @@ class _SignupViewState extends State<SignupView> {
               ),
               height: context.mq.size.height * 0.07,
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  context.vRouter.to('/home');
+                },
                 child: 'Get Otp'.text.thin.uppercase.white.bold.makeCentered(),
               ))
         ],
